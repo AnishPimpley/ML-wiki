@@ -18,4 +18,4 @@ Here SAME implies padding chosen such that OutputDImension = Ceiling( inputDimen
 * Stride: 2, padding : SAME, kernel: even, Input: odd => center misaligned
 * Stride: 2, padding : SAME, kernel: odd, Input: even => center misaligned
 * Stride: 2, padding : SAME, kernel: even, Input: even => No misalignment
-* Stride: 1, padding : NONE, kernel: odd, Input: odd => No misalignment (dimension decreaes by 1)
+* Stride: 1, padding : NONE, kernel: odd, Input: odd => No misalignment (dimension decreases by 1)
