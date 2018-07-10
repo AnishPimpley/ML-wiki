@@ -1,4 +1,4 @@
-# Random-ML-QnA
+# Random-ML-Quirks-&-Resources
 Some quirks and not so obvious things about ML models. A FAQ style document. For personal reference
 
 #### Why do Resnet (and later) models training curve see step-wise improvments in accuracy after seemingly coverging ?
