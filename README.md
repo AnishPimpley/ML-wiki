@@ -19,3 +19,6 @@ Here SAME implies padding chosen such that OutputDImension = Ceiling( inputDimen
 * Stride: 2, padding : SAME, kernel: odd, Input: even => center misaligned
 * Stride: 2, padding : SAME, kernel: even, Input: even => No misalignment
 * Stride: 1, padding : NONE, kernel: odd, Input: odd => No misalignment (dimension decreases by 1)
+
+#### Must have visualization tool for Neural networks:
+[Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models. 
