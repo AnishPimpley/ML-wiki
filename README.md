@@ -1,5 +1,8 @@
 # Random-ML-Quirks-&-Resources
-Some quirks and not so obvious things about ML models. A FAQ style document. For personal reference
+Some quirks, resources and not so obvious things about ML models. A FAQ style document.
+This is not a comprehensive wiki. It does however, capture some salient features and minute quirks about certain concepts that summaries and short explanations tend to skip.        
+I intend to include use cases for each concept and important references.
+For personal use for the most part.
 
 #### Why do Resnet (and later) models training curve see step-wise improvments in accuracy after seemingly coverging ?
 The learning rate is stepped by a factor of 10 every few 1000 iterations. Everytime the LR is decreased, we see a large improvment in accuracy.
@@ -22,3 +25,33 @@ Here SAME implies padding chosen such that OutputDImension = Ceiling( inputDimen
 
 #### Must have visualization tool for Neural networks:
 [Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models. 
+
+
+#### Merge / Fuse layers 
+2 feature maps of identical dimensions are added in an elementwise fashion.         
+Sizes of all input layers and out layer are identical.      
+
+#### Add layers
+Might mean merge or contatenate. Depends on author.Still confusing at time. Needs updating ?
+
+#### Residual connection 
+A type of skip connection that is explicitly used in residual blocks.       
+Has 2 channels in 1 block. Both channels diverge at input, and converge by merging/ fusing at the end of the block.      
+1st channel is a standard set of conv-BN-Relu operations.      
+The 2nd channel applies a 1x1 convolution to match the number of channels for merging. The 1x1 conv. can be strided to reduce spatial dimension to match 1st channel's downsampling.     
+*why?* :    
+avoiding signal degradtion during backprop through very deep NNs      
+Identity mappings in deep resnets have a hypercolumns like effect where the net can better use intermediate features.[ref](https://arxiv.org/abs/1603.05027) 
+
+#### 1x1 convolution (Pointwise convolution)
+A 1x1xK kernel, that operates on one pixel column in a DxDxK feature map.     
+Serves to decrease the number of channels while preserving spatial dimensions.
+
+#### Receptive Field Computation
+[[*ref*]](https://stackoverflow.com/questions/35582521/how-to-calculate-receptive-field-size)![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/CodeCogsEqn.png)
+
+#### OutputSize of Convolutional Operation
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/png.png)
+
+#### Padding size to  preserve input dimensions (for stride 1)
+0.5 * (filterSize -1 ) * DilationRate
