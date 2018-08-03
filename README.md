@@ -59,4 +59,4 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 0.5 * (filterSize -1 ) * DilationRate
 
 ### Must have visualization tool for Neural networks:
-[Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models. 
+[Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models.
