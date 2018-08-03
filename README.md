@@ -6,10 +6,10 @@
 
 # QUESTIONS
 
-### Why do Resnet (and later) models training curve see step-wise improvments in accuracy after seemingly coverging ?
+### Why do Resnet (and later)training curves see step-wise improvments in accuracy after seemingly coverging ?
 The learning rate is stepped by a factor of 10 every few 1000 iterations. Everytime the LR is decreased, we see a large improvment in accuracy.
 
-#### Misalignment of feature maps explained
+##### Misalignment of feature maps explained
 The performance of a semantic segmentation model depends on accurate superimposition of predicted segmentation maps and ground truth.      
 Superimposition implies that the final features maps should be aligned perfectly with the ground truths. In this context,   it would require the center and scale of the final segmentation map to be identical to ground truths and input feature maps.
 
