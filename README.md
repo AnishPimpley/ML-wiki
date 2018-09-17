@@ -63,7 +63,8 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 
 # Paper Summaries
 
-### Relation Networks for Object Detection - Hu et al. CVPR 2018 
+### Relation Networks for Object Detection - Hu et al. CVPR 2018 - [link](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)
 
-Short Summary
-[Detailed Summary](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)
+### Deep extraction of manga structural lines - Li et al. ACM TOG 2017 - [Presentaion](https://docs.google.com/presentation/d/1tgEAshcduu6F-ZtREg-hK7pIOyhsnmWOhnF78dtFQg0/edit?usp=sharing)
+
+### Effects of valence and arousal on working memory performance in VR games - Gabana et al. ACII 2017 - [Presentation](https://docs.google.com/presentation/d/12me2wJxNHPe08m9V_zlM6tTTwZnhSPro0NPwmn7VMmA/edit?usp=sharing)
