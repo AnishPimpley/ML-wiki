@@ -1,15 +1,15 @@
-# Random-ML-Quirks-&-Resources
+# ML Wiki- FAQ, Resources and Reference
 >Some quirks, resources and not so obvious things about ML models. A FAQ style document.
->This is not a comprehensive wiki. It does however, capture some salient features and minute quirks about certain concepts >that summaries and short explanations tend to skip.        
+>This is not a comprehensive wiki. It does however, capture some salient features and minute quirks about certain concepts that summaries and short explanations tend to skip.        
 >I intend to include use cases for each concept and important references.
 >For personal use for the most part.
 
 # QUESTIONS
 
-### Why do Resnet (and later)training curves see step-wise improvments in accuracy after seemingly coverging ?
+#### Why do Resnet (and later)training curves see step-wise improvments in accuracy after seemingly coverging ?
 The learning rate is stepped by a factor of 10 every few 1000 iterations. Everytime the LR is decreased, we see a large improvment in accuracy.
 
-##### Misalignment of feature maps explained
+#### Why do feature maps misalign in CNNs and why is it a problem for semantic seg?
 The performance of a semantic segmentation model depends on accurate superimposition of predicted segmentation maps and ground truth.      
 Superimposition implies that the final features maps should be aligned perfectly with the ground truths. In this context,   it would require the center and scale of the final segmentation map to be identical to ground truths and input feature maps.
 
@@ -18,12 +18,15 @@ This misalignment caused by translation is unavoidable for certain combinations 
 The combination are as follows: (for 'SAME' paddingMode, and Stride =2 )     
 Here SAME implies padding chosen such that OutputDImension = Ceiling( inputDimension / Stride )
 
-#### Common combinations and their effects on filterSize 
-* Stride: 2, padding : SAME, kernel: odd, Input: odd => No misalignment
-* Stride: 2, padding : SAME, kernel: even, Input: odd => center misaligned
-* Stride: 2, padding : SAME, kernel: odd, Input: even => center misaligned
-* Stride: 2, padding : SAME, kernel: even, Input: even => No misalignment
-* Stride: 1, padding : NONE, kernel: odd, Input: odd => No misalignment (dimension decreases by 1)
+##### Common combinations and their effects on filterSize 
+
+| Stride  | padding |kernel  | Input | Result
+| ------------- | ------------- |------------- | ------------- | ------------- |
+| 2  | SAME  |  odd| odd |No misalignment | 
+| 2  | SAME  |  even | odd |center misaligned | 
+| 2  | SAME  |  odd | even |center misaligned | 
+| 2  | SAME  |  even | even |no misalignment |
+| 1  | NONE  | odd | odd |No misalignment (dimension decreases by 1) |
 
 # DEFINITIONS AND JARGON
 
@@ -63,8 +66,8 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 
 # Paper Summaries
 
-### Relation Networks for Object Detection - Hu et al. CVPR 2018 - [link](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)
+* Relation Networks for Object Detection - Hu et al. CVPR 2018 - [link](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)     
 
-### Deep extraction of manga structural lines - Li et al. ACM TOG 2017 - [Presentaion](https://docs.google.com/presentation/d/1tgEAshcduu6F-ZtREg-hK7pIOyhsnmWOhnF78dtFQg0/edit?usp=sharing)
+* Deep extraction of manga structural lines - Li et al. ACM TOG 2017 - [Presentaion](https://docs.google.com/presentation/d/1tgEAshcduu6F-ZtREg-hK7pIOyhsnmWOhnF78dtFQg0/edit?usp=sharing)
 
-### Effects of valence and arousal on working memory performance in VR games - Gabana et al. ACII 2017 - [Presentation](https://docs.google.com/presentation/d/12me2wJxNHPe08m9V_zlM6tTTwZnhSPro0NPwmn7VMmA/edit?usp=sharing)
+* Effects of valence and arousal on working memory performance in VR games - Gabana et al. ACII 2017 - [Presentation](https://docs.google.com/presentation/d/12me2wJxNHPe08m9V_zlM6tTTwZnhSPro0NPwmn7VMmA/edit?usp=sharing)
