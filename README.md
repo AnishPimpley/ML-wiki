@@ -66,4 +66,4 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 ### Relation Networks for Object Detection - Hu et al. CVPR 2018 
 
 Short Summary
-[Detailed Summary](Personal-ML-FAQ/Summaries/RelationNetworksForObjectDetection.md)
+[Detailed Summary](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)
