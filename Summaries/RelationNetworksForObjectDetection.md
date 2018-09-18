@@ -40,7 +40,7 @@
 
 ##### Fusing and output of module
 * The geometric and appearance relations are combined using equation 3 below
-* many branches for different types of feature relations
+* many branches for different types of object relations
 * concat all branches residually
 * relation output is same dimension as the input image
 * fuse with appearance features (which is input) to get new output feature map
