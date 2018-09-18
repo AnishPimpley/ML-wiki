@@ -64,7 +64,7 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 ### Must have visualization tool for Neural networks:
 [Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models.
 
-# Paper Summaries
+# PAPER SUMMARIES
 
 * Relation Networks for Object Detection - Hu et al. CVPR 2018 - [link](https://github.com/AnishPimpley/Personal-ML-FAQ/blob/master/Summaries/RelationNetworksForObjectDetection.md)     
 
