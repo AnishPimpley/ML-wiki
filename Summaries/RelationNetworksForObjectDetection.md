@@ -47,9 +47,9 @@
 
 ##### Computationally these 4 equations govern the output :
 
-* ![](https://img-blog.csdn.net/20180529111327788?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-* ![](https://img-blog.csdn.net/20180529111253825?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-* ![](https://img-blog.csdn.net/20180529111201856?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/eq1.png)
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/eq2.png)
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/eq3.png)
 
 where *f_r(n)* is the output.
 
