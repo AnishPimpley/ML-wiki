@@ -1,7 +1,8 @@
 
-Weekly report
 
 # Relation Networks for Object Detection
+
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/relation%20network%20for%20obj%20detection%20graph.png)
 
 ## key points :
 
@@ -13,29 +14,45 @@ Weekly report
 
 1. Parallel and learnable
 2. No extra supervision
-3. Unlike stock attention, this also uses geometric features to compute relations ina addition to appearance (pixel) features
+3. Unlike stock attention, this also uses geometric (bbox) features to compute relations ina addition to appearance (pixel) features
 3. Translation invariant (geometric features are also scale invariant)
 4. In place and stackable
 
 ### Relation module (ORM)
 
-f_a is the appearance feature : pixel information
-all appearance features are projected into  asubspace using Wk and Wq matrices
-Query weight is the *f_a* object we are concerned with.
-The key weight is *f_a* for all other objects wrt. to which a relation is computed
-scaled dot product is a 1-object to all objects relation
+![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/Object%20relation%20module.png)
 
-* Appearance feature *f_a* - pixel information of each object
-* *f_a* projected into a subspace 
-* object-object score computed via dot product
+2 parts o f relation module : Appearance (pixel data) and Geometric (Bbox)
+
+##### Appearance module
+* f_a is the appearance feature : pixel information      
+* Query weight is wrt. the *f_a* object we are concerned with.          
+* The key weight is wrt. *f_a* for all other objects wrt. to which a relation is computed           
+* all appearance features are projected into a subspace using Wk and Wq matrices           
+* The the dot product between the 2 projected features is computed in the *dk* dimensional space         
+* scaled dot product is a 1-object to all objects relation            
+
+##### Geometric module
 * geometric feature f_g - bounding box
-* f_g -> networwk -> w_g
-* f_g, w_g : translation & scale invariant
-* joint weighted sum to get relation vector of one object
-* many branches for different types of features
+* bbox is represented in translation & scale invariant manner as a 4 element vector
+* This vector is embedding into a high dimensional space called *Episolon_g* using the same method as "attention is all you need"
+* *Episilon_g* is tranformed with learned geometric weight *W_g* and relu is applied to its result
+
+##### Fusing and output of module
+* The geometric and appearance relations are combined using equation 3 below
+* many branches for different types of feature relations
 * concat all branches residually
 * relation output is same dimension as the input image
-* (Fuse?) with appearance to get new feature map
+* fuse with appearance features (which is input) to get new output feature map
+
+##### Computationally these 4 equations govern the output :
+
+* ![](https://img-blog.csdn.net/20180529111327788?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+* ![](https://img-blog.csdn.net/20180529111253825?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+* ![](https://img-blog.csdn.net/20180529111201856?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0p1bGlhbG92ZTEwMjEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+where *f_r(n)* is the output.
+
 
 ### NMS relacement module
 
@@ -46,9 +63,5 @@ scaled dot product is a 1-object to all objects relation
 
 * Learnt attention weights closely mimic the class co-occurence probability (implicitly learns it)
 * Not efficient for dense anchors or dense region proposals, but dense proposals may be redudnant to begin with
-* complexity is proportional to sq. of region proposals, so can't use for sliding window methods like YOLO, SSD
-* 
-
-# Some questions
-
-1. In 
+* complexity is proportional to sq. of region proposals, so can't use for sliding window methods like YOLO, SSD as too inefficient
+* Does not appear to capture any semantic relationship between labels (like cat is an animal, or the image being a particular scene) 
