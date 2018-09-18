@@ -4,7 +4,7 @@
 
 ![](https://raw.githubusercontent.com/AnishPimpley/ML-wiki/master/media/relation%20network%20for%20obj%20detection%20graph.png)
 
-## key points :
+### key points :
 
 1. Introduces plug-in relation module to compute inplace relations between detected objects (bbox)
 2. Heavily inspired from self-attention paper (Scaled Dot-Product Attention)
@@ -64,4 +64,5 @@ where *f_r(n)* is the output.
 * Learnt attention weights closely mimic the class co-occurence probability (implicitly learns it)
 * Not efficient for dense anchors or dense region proposals, but dense proposals may be redudnant to begin with
 * complexity is proportional to sq. of region proposals, so can't use for sliding window methods like YOLO, SSD as too inefficient
-* Does not appear to capture any semantic relationship between labels (like cat is an animal, or the image being a particular scene) 
+* Does not appear to capture any semantic relationship between labels (like cat is an animal, or the image being a particular scene)
+* does capture co-occurance very well, but learns it only from this dataset and no general knowledge model
