@@ -50,6 +50,11 @@ Identity mappings in deep resnets have a hypercolumns like effect where the net 
 A 1x1xK kernel, that operates on one pixel column in a DxDxK feature map.     
 Serves to decrease the number of channels while preserving spatial dimensions.
 
+### Attention
+By and large, Attention(QW_j
+- <img src="https://latex.codecogs.com/gif.latex?Attention(QW_j^Q )=\text { Probability of a sensor reading value when sleep onset is observed at a time bin } t " />
+
+
 # RESOURCES
 
 ### Receptive Field Computation
