@@ -56,11 +56,11 @@ The importance between 2 vectors can be computed in different ways. The original
 
 # Models explained 
 
-### Transformer
+### Transformer - Multi head attention and encoder with no directionality
 Encoder-decoder style multi head attention model for sequence transduction
 
-### BERT
-Add bidirectionality to transformers by using a masked language model pretraining process. It includes masking part of the sentence and then trying to complete4 the task using the context. Masked pretraining is done on sentrnce reconstruction and next sentence predictions tasks. 
+### BERT - Denoising autoencoder transformer
+Add bidirectionality to transformers by using a masked language model pretraining process. It includes masking part of the sentence and then trying to complete4 the task using the context. Masked pretraining is done on sentrnce reconstruction and next sentence predictions tasks.
 
 # RESOURCES
 
