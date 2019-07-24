@@ -51,8 +51,9 @@ A 1x1xK kernel, that operates on one pixel column in a DxDxK feature map.
 Serves to decrease the number of channels while preserving spatial dimensions.
 
 ### Attention
-By and large, Attention(QW_j
-- <img src="https://latex.codecogs.com/gif.latex?Attention(QW_j^Q )=\text { Probability of a sensor reading value when sleep onset is observed at a time bin } t " />
+By and large, Attention(QW_j , KW_i, VW_i) is the importance of the j<sup>th</sup> representation of the query to the i<sup>th</sup> representation of the key that relates to the i<sup>th</sup> value that must be transformed.         
+The importance between 2 vectors can be computed in different ways. The original transformer uses a scaled dot product.
+
 
 
 # RESOURCES
@@ -68,6 +69,12 @@ By and large, Attention(QW_j
 
 ### Must have visualization tool for Neural networks:
 [Netscope](http://ethereon.github.io/netscope/quickstart.html) : Takes caffe prototxt files and gives detailed visualizations even the more complex models.
+
+### inline Latex editor
+http://latex.codecogs.com/eqneditor/editor.php
+
+### inline image creator
+https://yuml.me/diagram/scruffy/class/samples
 
 # PAPER SUMMARIES
 
