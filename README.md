@@ -51,7 +51,7 @@ A 1x1xK kernel, that operates on one pixel column in a DxDxK feature map.
 Serves to decrease the number of channels while preserving spatial dimensions.
 
 ### Attention
-By and large, Attention(QW_j , KW_i, VW_i) is the importance of the j<sup>th</sup> representation of the query to the i<sup>th</sup> representation of the key that relates to the i<sup>th</sup> value that must be transformed.         
+By and large, Attention(QW<sup>j</sup> , KW<sup>i</sup>, V<sup>i</sup>) is the importance of the j<sup>th</sup> representation of the query to the i<sup>th</sup> representation of the key that relates to the i<sup>th</sup> value that must be transformed.         
 The importance between 2 vectors can be computed in different ways. The original transformer uses a scaled dot product.
 
 
