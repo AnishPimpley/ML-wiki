@@ -54,7 +54,13 @@ Serves to decrease the number of channels while preserving spatial dimensions.
 By and large, Attention(QW<sup>j</sup> , KW<sup>i</sup>, V<sup>i</sup>) is the importance of the j<sup>th</sup> representation of the query to the i<sup>th</sup> representation of the key that relates to the i<sup>th</sup> value that must be transformed.         
 The importance between 2 vectors can be computed in different ways. The original transformer uses a scaled dot product.
 
+# Models explained 
 
+### Transformer
+Encoder-decoder style multi head attention model for sequence transduction
+
+### BERT
+Add bidirectionality to transformers by using a masked language model pretraining process. It includes masking part of the sentence and then trying to complete4 the task using the context. Masked pretraining is done on sentrnce reconstruction and next sentence predictions tasks. 
 
 # RESOURCES
 
